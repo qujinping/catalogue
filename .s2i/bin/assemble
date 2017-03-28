@@ -27,7 +27,8 @@ echo "---> Building application source..."
 CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -v -o catelogue  github.com/microservices-demo/catalogue/cmd/cataloguesvc
 
 echo "---> Installing application binary..."
-cp ./catelogue /opt/app-root/bin
+cp ./catelogue /opt/app-root/bin/
+cp /tmp/scripts/run /opt/app-root/scripts/
 
 cp ./images/* /opt/app-root/data/
 
